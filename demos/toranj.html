@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ترنج | مجله آشپزی و دستور غذا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--olive:#34401f;--olive2:#4d5d2c;--tomato:#d63f27;--tomato2:#b92f1a;--white:#fcfbf8;--leaf:#e8ecd9;--ochre:#c58a2b;--ink:#1c2112;--mute:#5f664f;--line:#dfe2d2;--r:16px;--s1:8px;--s2:16px;--s3:24px;--s4:32px;--s6:48px;--s8:64px;--s12:96px}
+*{box-sizing:border-box;margin:0}
+body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--white);color:var(--ink);line-height:1.8;font-size:16px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+.wrap{max-width:1240px;margin:auto;padding:0 var(--s3)}
+section{padding:var(--s12) 0}
+h1,h2,h3,.disp{font-family:Lalezar,Vazirmatn,sans-serif;font-weight:400;line-height:1.25}
+h2{font-size:clamp(32px,4.5vw,52px);color:var(--olive)}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:var(--s3);margin-bottom:var(--s4)}
+.sh p{color:var(--mute);max-width:46ch}
+.btn{display:inline-flex;align-items:center;gap:var(--s1);padding:12px 24px;border-radius:999px;background:var(--tomato);color:#fff;font-weight:700;transition:background .2s}
+.btn:hover{background:var(--tomato2)}
+.btn.ghost{background:transparent;color:var(--olive);box-shadow:inset 0 0 0 2px var(--olive)}
+.btn.ghost:hover{background:var(--olive);color:#fff}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(252,251,248,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:var(--s4);height:76px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Lalezar;font-size:36px;color:var(--olive)}
+nav{display:flex;gap:var(--s4);margin-inline-start:var(--s3)}
+nav a{font-size:17px;font-weight:500;color:var(--olive);padding:6px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+nav a:hover{color:var(--tomato)}nav a.on{border-color:var(--tomato);color:var(--tomato);font-weight:700}
+.tools{display:flex;align-items:center;gap:var(--s1);margin-inline-start:auto}
+.ib{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;position:relative;color:var(--olive)}
+.ib:hover{background:var(--leaf)}
+.ib svg{width:22px;height:22px}
+#fc{position:absolute;top:2px;inset-inline-start:2px;min-width:18px;height:18px;border-radius:9px;background:var(--tomato);color:#fff;font-size:11px;display:grid;place-items:center;line-height:1}
+.nav .btn{padding:8px 22px;font-size:15px}
+/* hero */
+.hero{padding:var(--s6) 0 var(--s12)}
+.hg{display:grid;grid-template-columns:1fr 1.05fr;gap:var(--s6);align-items:center}
+.hero h1{font-size:clamp(46px,7vw,92px);color:var(--olive);line-height:1.15}
+.hero h1 em{font-style:normal;color:var(--tomato)}
+.hero p.lead{font-size:18px;color:var(--mute);margin:var(--s3) 0;max-width:46ch}
+.search{display:flex;background:#fff;border-radius:999px;padding:8px;box-shadow:0 0 0 2px var(--olive);max-width:560px}
+.search input{flex:1;border:0;background:none;font:inherit;padding:0 var(--s3);min-width:0;color:var(--ink)}
+.search input:focus{outline:0}
+.tags{display:flex;gap:var(--s1);flex-wrap:wrap;margin-top:var(--s2);color:var(--mute);font-size:14px;align-items:center}
+.tags a{padding:2px 14px;border-radius:99px;background:var(--leaf);color:var(--olive)}
+.hv{position:relative;aspect-ratio:4/4.3}
+.hv>img{border-radius:var(--s4) var(--s4) 200px var(--s4)}
+.float{position:absolute;bottom:-24px;inset-inline-end:-16px;background:var(--olive);color:#fff;padding:12px 16px 12px 24px;border-radius:var(--r);display:flex;gap:var(--s2);align-items:center;max-width:300px}
+.float div.p{width:72px;height:72px;border-radius:50%;overflow:hidden;flex:none;border:3px solid var(--ochre)}
+.float small{color:#cbd5ac;display:block}
+.float b{font-family:Lalezar;font-weight:400;font-size:20px;line-height:1.3;display:block}
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s2)}
+.cat{position:relative;border-radius:var(--r);overflow:hidden;min-height:230px;color:#fff;grid-column:span 3;isolation:isolate}
+.cat:nth-child(1){grid-column:span 5;min-height:320px}.cat:nth-child(2){grid-column:span 4;min-height:320px}.cat:nth-child(3){grid-column:span 3;min-height:320px}
+.cat img{position:absolute;inset:0;z-index:-2;transition:transform .5s}
+.cat:hover img{transform:scale(1.05)}
+.cat:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(28,33,18,.85),rgba(28,33,18,0) 60%)}
+.cat div{position:absolute;bottom:var(--s2);inset-inline:var(--s3);display:flex;justify-content:space-between;align-items:end}
+.cat h3{font-size:26px}.cat span{font-size:13px;opacity:.85}
+/* recipe cards */
+.pop{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s3)}
+.rc{grid-column:span 3;display:flex;flex-direction:column;gap:var(--s2)}
+.rc.big{grid-column:span 6;grid-row:span 2}
+.ph{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3.4}
+.rc.big .ph{flex:1;aspect-ratio:auto;min-height:420px}
+.fav{position:absolute;top:12px;inset-inline-start:12px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;color:var(--tomato)}
+.fav svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2}
+.fav.on svg{fill:currentColor}
+.rc h3{font-size:24px;color:var(--olive)}.rc.big h3{font-size:40px}
+.rc.big p{color:var(--mute);max-width:52ch}
+.meta{display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center;font-size:14px;color:var(--mute)}
+.meta .st{color:var(--ochre);font-weight:700;letter-spacing:1px}
+.dif{padding:0 12px;border-radius:99px;background:var(--leaf);color:var(--olive);font-size:13px}
+/* ingredients */
+.ing{background:var(--olive);color:#fff}
+.ig{display:grid;grid-template-columns:1fr 1fr;gap:var(--s8);align-items:center}
+.ing h2{color:#fff}
+.ing p{color:#d3dbb8;margin:var(--s2) 0 var(--s3)}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:var(--s4)}
+.chip{padding:8px 20px;border-radius:99px;box-shadow:inset 0 0 0 2px #8a9a5c;color:#fff;transition:.15s}
+.chip[aria-pressed=true]{background:var(--ochre);box-shadow:none;color:var(--ink);font-weight:700}
+.chip[aria-pressed=true]:before{content:"✓ "}
+.res{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap}
+.res b{font-family:Lalezar;font-weight:400;font-size:20px;color:var(--ochre)}
+.iv{aspect-ratio:4/3.3;border-radius:var(--r);overflow:hidden}
+/* seasonal */
+.sea{display:grid;grid-template-columns:repeat(12,1fr);align-items:center}
+.sea .im{grid-column:1/9;grid-row:1;aspect-ratio:16/10;border-radius:var(--r);overflow:hidden}
+.sea .tx{grid-column:7/-1;grid-row:1;background:var(--white);padding:var(--s6);border-radius:var(--r);box-shadow:0 0 0 2px var(--olive);position:relative;right:0}
+.sea .tx .tg{display:inline-block;background:var(--tomato);color:#fff;border-radius:99px;padding:0 16px;font-size:14px;margin-bottom:var(--s2)}
+.sea h2{margin-bottom:var(--s2)}.sea p{color:var(--mute);margin-bottom:var(--s3)}
+/* quick */
+.qk{background:var(--leaf)}
+.q4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3)}
+.q4 .rc{grid-column:auto}
+.q4 .ph{aspect-ratio:1}
+.tm{position:absolute;bottom:12px;inset-inline-end:12px;background:var(--tomato);color:#fff;border-radius:99px;padding:0 14px;font-weight:700;font-size:14px}
+/* planner */
+.pl{display:grid;grid-template-columns:.8fr 1.6fr;gap:var(--s6);align-items:center}
+.pl p{color:var(--mute);margin:var(--s2) 0 var(--s3)}
+.tb{overflow-x:auto;border-radius:var(--r);box-shadow:0 0 0 2px var(--olive)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px;background:#fff}
+th,td{padding:12px;text-align:center;border-bottom:1px solid var(--line);border-inline-start:1px solid var(--line)}
+th{background:var(--olive);color:#fff;font-weight:500}
+td:first-child,th:first-child{border-inline-start:0}
+tbody th{background:var(--leaf);color:var(--olive);font-weight:700}
+tr:last-child td,tr:last-child th{border-bottom:0}
+td.t{background:#fdf0ec;font-weight:700;color:var(--tomato2)}
+/* journal */
+.jg{grid-auto-rows:1fr;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s3) var(--s4)}
+.ar{display:flex;gap:var(--s2);align-items:center;grid-column:span 6;padding-bottom:var(--s3);border-bottom:1px solid var(--line)}
+.ar .ph{width:200px;flex:none;aspect-ratio:1}
+.ar .k{color:var(--tomato);font-weight:700;font-size:14px}
+.ar h3{font-size:22px;color:var(--olive);margin:2px 0 4px}
+.ar p{color:var(--mute);font-size:15px;line-height:1.7}
+.ar.lead{grid-column:1/7;grid-row:1/3;flex-direction:column;align-items:stretch;border:0;padding:0;gap:var(--s2)}
+.ar.lead .ph{width:100%;aspect-ratio:auto;flex:1;min-height:340px}
+.ar.lead h3{font-size:38px}
+.ar.mid{grid-column:7/-1}
+/* newsletter */
+.nl{background:var(--tomato);color:#fff;border-radius:var(--s4);padding:var(--s8);display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);align-items:center;margin-bottom:var(--s12)}
+.nl h2{color:#fff}.nl p{margin-top:var(--s1);opacity:.92}
+.nl form{display:flex;background:#fff;border-radius:99px;padding:8px}
+.nl input{flex:1;border:0;background:none;font:inherit;padding:0 var(--s3);min-width:0;color:var(--ink)}
+.nl input:focus{outline:0}
+.nl .btn{background:var(--olive)}.nl .btn:hover{background:var(--ink)}
+.nl small{display:block;margin-top:12px;opacity:.85}
+footer{background:var(--ink);color:#c9cfb6;padding:var(--s8) 0 var(--s3)}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:var(--s6)}
+footer .logo{color:#fff;margin-bottom:var(--s2)}
+footer h4{color:#fff;margin-bottom:var(--s2);font-size:16px}
+footer li{list-style:none;margin-bottom:8px;font-size:15px}
+footer ul{padding:0}
+footer a:hover{color:var(--ochre)}
+.soc{display:flex;gap:12px;margin-top:var(--s2)}
+.soc a{padding:2px 14px;border-radius:99px;box-shadow:inset 0 0 0 1px #5c654a;font-size:14px}
+.cp{margin-top:var(--s6);padding-top:var(--s3);border-top:1px solid #343a26;font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--s1)}
+@media(max-width:1024px){
+nav{display:none}
+.hg,.ig,.pl,.nl{grid-template-columns:1fr}
+.hv{max-width:560px}
+.cat,.cat:nth-child(n){grid-column:span 6;min-height:240px}
+.cat:nth-child(1){grid-column:1/-1}
+.rc,.rc.big{grid-column:span 6;grid-row:auto}
+.rc.big{grid-column:1/-1}.rc.big .ph{min-height:320px}
+.q4{grid-template-columns:1fr 1fr}
+.sea .im{grid-column:1/-1;grid-row:1}.sea .tx{grid-column:1/-1;grid-row:2;margin:-48px 24px 0}
+.jg{grid-auto-rows:auto}.ar,.ar.mid{grid-column:1/-1}.ar.lead{grid-column:1/-1;grid-row:auto}.ar.lead .ph{min-height:300px}
+.fg{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+section{padding:var(--s8) 0}
+.wrap{padding:0 var(--s2)}
+.nav .btn{display:none}.nav{gap:var(--s1)}
+.cat,.cat:nth-child(n),.rc,.rc.big{grid-column:1/-1}
+.cat{min-height:200px}.cat:nth-child(1){min-height:240px}
+.sh{flex-direction:column;align-items:start}
+.q4{grid-template-columns:1fr}
+.ar.mid .ph{width:96px}.ar h3{font-size:19px}.ar.lead h3{font-size:30px}
+.nl{padding:var(--s4) var(--s3)}
+.nl form{flex-direction:column;border-radius:var(--r);gap:8px}.nl input{padding:12px}
+.fg{grid-template-columns:1fr}
+.float{inset-inline-end:8px;max-width:260px}
+.search{flex-direction:column;border-radius:var(--r);gap:8px}.search input{padding:12px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.all{font-weight:700;color:var(--tomato);white-space:nowrap;padding:4px 0;border-bottom:2px solid transparent;transition:border-color .2s}.all:hover,.all:focus-visible{border-bottom-color:currentColor}.sh p{margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#top" aria-label="ترنج"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="15" fill="#d63f27"/><path d="M20 8c0-5 5-7 10-6-1 5-4 8-10 6z" fill="#4d5d2c"/><path d="M12 20c3-4 9-5 13-2" stroke="#fcfbf8" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>ترنج</a>
+<nav aria-label="منوی اصلی"><a class="on" href="#top">صفحه اصلی</a><a href="#popular">دستور غذاها</a><a href="#cats">دسته‌بندی‌ها</a><a href="#journal">مجله آشپزی</a><a href="#footer">درباره ما</a></nav>
+<div class="tools">
+<a class="ib" href="#search" aria-label="جست‌وجو"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></a>
+<a class="ib" href="#popular" aria-label="دستورهای ذخیره‌شده"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg><span id="fc">۰</span></a>
+<a class="btn" href="#popular">کشف دستورها</a>
+</div></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hg">
+<div>
+<h1>سفره‌ی امروز، <em>یک طعم تازه</em> می‌خواهد</h1>
+<p class="lead">از ته‌چین و زرشک‌پلو تا لازانیا و پاستا؛ بیش از ۸۰۰ دستور آزموده با مواد ساده و توضیح قدم‌به‌قدم، برای هر مهارت و هر زمانی که دارید.</p>
+<form class="search" id="search" onsubmit="return false" role="search"><input type="search" placeholder="نام غذا یا مواد اولیه را جست‌وجو کنید..." aria-label="جست‌وجوی دستور غذا"><button class="btn" type="submit">جست‌وجو</button></form>
+<div class="tags">شروع سریع: <a href="#popular">زرشک‌پلو</a><a href="#quick">شاکشوکا</a><a href="#popular">لازانیا</a><a href="#popular">چیزکیک</a></div>
+</div>
+<div class="hv"><img data-i="hero" alt="سفره‌ای پر از غذاهای رنگارنگ زیر نور آفتاب">
+<div class="float"><div class="p"><img data-i="shak" alt=""></div><div><small>پیشنهاد امروز</small><b>شاکشوکا، صبحانه‌ای ۲۰ دقیقه‌ای</b></div></div></div>
+</div></section>
+
+<section id="cats" style="padding-top:0"><div class="wrap">
+<div class="sh"><div><h2>امروز دلتان چه می‌خواهد؟</h2><p>هفت دسته از سفره‌های ایرانی تا شیرینی‌های آخر شب؛ هر کدام با ده‌ها دستور آزموده‌شده.</p></div><a class="all" href="#cats">مشاهده همه دسته‌ها</a></div>
+<div class="cats">
+<a class="cat" href="#popular"><img data-i="iran" alt="غذاهای ایرانی"><div><h3>غذاهای ایرانی</h3><span>۲۴۰ دستور</span></div></a>
+<a class="cat" href="#popular"><img data-i="intl" alt="غذاهای بین‌المللی"><div><h3>غذاهای بین‌المللی</h3><span>۱۸۰ دستور</span></div></a>
+<a class="cat" href="#popular"><img data-i="app" alt="پیش‌غذا"><div><h3>پیش‌غذا</h3><span>۸۵ دستور</span></div></a>
+<a class="cat" href="#popular"><img data-i="dessert" alt="دسر و شیرینی"><div><h3>دسر و شیرینی</h3><span>۱۲۰ دستور</span></div></a>
+<a class="cat" href="#popular"><img data-i="drink" alt="نوشیدنی"><div><h3>نوشیدنی</h3><span>۶۰ دستور</span></div></a>
+<a class="cat" href="#popular"><img data-i="veg" alt="غذاهای گیاهی"><div><h3>غذاهای گیاهی</h3><span>۹۰ دستور</span></div></a>
+<a class="cat" href="#quick"><img data-i="fast" alt="غذاهای سریع"><div><h3>غذاهای سریع</h3><span>۱۱۰ دستور</span></div></a>
+</div></div></section>
+
+<section id="popular" style="padding-top:0"><div class="wrap">
+<div class="sh"><div><h2>محبوب‌ترین دستورهای ترنج</h2><p>آنچه این هفته بیشتر از همه پخته و ذخیره شده است.</p></div><a class="all" href="#popular">مشاهده همه دستورها</a></div>
+<div class="pop" id="pop"></div>
+</div></section>
+
+<section class="ing" id="ingredients"><div class="wrap ig">
+<div>
+<h2>در یخچال چه دارید؟</h2>
+<p>مواد موجود را انتخاب کنید تا دستورهایی که همین حالا می‌توانید بپزید پیدا شود.</p>
+<div class="chips" id="chips"></div>
+<div class="res"><button class="btn" id="find">پیدا کردن دستور غذا</button><span id="cnt" aria-live="polite">هنوز ماده‌ای انتخاب نشده</span></div>
+</div>
+<div class="iv"><img data-i="ingr" alt="مواد اولیه لازانیا روی میز تیره"></div>
+</div></section>
+
+<section><div class="wrap sea">
+<div class="im"><img data-i="spring" alt="مارچوبه، نخودفرنگی، کنگرفرنگی و تربچه روی تخته چوبی"></div>
+<div class="tx"><span class="tg">فصل بهار</span><h2>بهار را در بشقاب بچینید</h2><p>مارچوبه، نخودفرنگی، تربچه و کنگر؛ سبزی‌های نورسته‌ای که با کمی لیمو و روغن زیتون به بهترین شکل می‌درخشند. سالاد بهاره ما را از همین مواد بسازید.</p><a class="btn" href="#journal">مشاهده دستور</a></div>
+</div></section>
+
+<section class="qk" id="quick"><div class="wrap">
+<div class="sh"><div><h2>سی دقیقه تا سر سفره</h2><p>دستورهای ساده برای شب‌هایی که وقت کم است و اشتها زیاد.</p></div><a class="all" href="#quick">مشاهده همه دستورهای سریع</a></div>
+<div class="q4" id="q4"></div>
+</div></section>
+
+<section id="planner"><div class="wrap pl">
+<div><h2>برنامه غذایی هفته</h2><p>دیگر لازم نیست هر روز فکر کنید ناهار چه بپزیم. هفته را یک‌جا برنامه‌ریزی کنید و لیست خرید را آماده بگیرید.</p><a class="btn" href="#planner">برنامه غذایی هفته را مشاهده کنید</a></div>
+<div class="tb"><table><thead><tr id="dh"></tr></thead><tbody id="db"></tbody></table></div>
+</div></section>
+
+<section id="journal" style="padding-top:0"><div class="wrap">
+<div class="sh"><div><h2>مجله آشپزی ترنج</h2><p>تکنیک، شناخت مواد، نکته‌های آشپزخانه و فرهنگ غذا؛ برای کسانی که فقط پختن را دوست ندارند.</p></div><a class="all" href="#journal">مشاهده همه مقاله‌ها</a></div>
+<div class="jg">
+<article class="ar lead"><div class="ph"><img data-i="iran" alt="سفره ایرانی با ته‌چین، کوکو و خورش"></div><div><span class="k">فرهنگ غذا</span><h3>سفره ایرانی؛ چرا هر غذا جای خودش را دارد؟</h3><p>از ته‌دیگ طلایی تا قورمه‌سبزی و کوکو؛ نگاهی به منطق چیدن سفره در خانه‌های ایرانی.</p></div></article>
+<article class="ar mid"><div class="ph"><img data-i="veg" alt="کینوا و سبزیجات برشته"></div><div><span class="k">آشپزی فصلی</span><h3>پنج سبزی فصل که حتماً بخرید</h3><p>چه موقع بخریم، چطور نگه داریم و با چه چیزی بپزیم.</p></div></article>
+<article class="ar mid"><div class="ph"><img data-i="ingr" alt="پنیر، آرد و قارچ"></div><div><span class="k">شناخت مواد</span><h3>کدام پنیر برای لازانیا؟</h3><p>فرق پنیرهای پیتزا و پنیر پخته در طعم و کشش.</p></div></article>
+</div></div></section>
+
+<div class="wrap"><div class="nl">
+<div><h2>ایده‌های تازه برای آشپزی</h2><p>دستورهای جدید و پیشنهادهای آشپزی را در ایمیل خود دریافت کنید.</p></div>
+<div><form onsubmit="this.nextElementSibling.textContent='ممنون! اولین ایمیل ترنج به‌زودی می‌رسد.';return false"><input type="email" required placeholder="ایمیل شما" aria-label="ایمیل"><button class="btn" type="submit">اشتراک</button></form><small>هفته‌ای یک ایمیل؛ هر زمان خواستید لغو کنید.</small></div>
+</div></div>
+</main>
+
+<footer id="footer"><div class="wrap">
+<div class="fg">
+<div><a class="logo" href="#top">ترنج</a><p style="max-width:34ch">مجله آشپزی و دستور غذای فارسی؛ برای کسانی که هر روز دنبال یک طعم تازه‌اند.</p><div class="soc"><a href="#">اینستاگرام</a><a href="#">تلگرام</a><a href="#">آپارات</a></div></div>
+<div><h4>پیمایش</h4><ul><li><a href="#top">صفحه اصلی</a></li><li><a href="#popular">دستور غذاها</a></li><li><a href="#journal">مجله آشپزی</a></li><li><a href="#planner">برنامه هفتگی</a></li></ul></div>
+<div><h4>دسته‌ها</h4><ul><li><a href="#cats">غذاهای ایرانی</a></li><li><a href="#cats">غذاهای بین‌المللی</a></li><li><a href="#cats">دسر و شیرینی</a></li><li><a href="#cats">غذاهای گیاهی</a></li></ul></div>
+<div><h4>تماس با ما</h4><ul><li>hello@toranj.example</li><li>تهران، خیابان ولیعصر، پلاک ۱۲۰</li><li><a href="#top">خبرنامه ترنج</a></li></ul></div>
+</div>
+<div class="cp"><span>© ۱۴۰۵ ترنج. تمام حقوق محفوظ است.</span><span>با عشق به آشپزی ساخته شده</span></div>
+</div></footer>
+
+<script>
+const H='<svg viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>';
+const R=[
+["zer","زرشک‌پلو با مرغ","۵۰ دقیقه","متوسط","۴٫۹","همان بشقاب مهمانی؛ برنج زعفرانی، زرشک تازه‌تفت و مرغ ترد که بوی خانه می‌دهد.","zer"],
+["las","لازانیا","۷۵ دقیقه","متوسط","۴٫۸","","las"],
+["alf","پاستا آلفردو","۲۵ دقیقه","آسان","۴٫۷","","alf"],
+["tah","ته‌چین مرغ","۹۰ دقیقه","دشوار","۴٫۹","","tah"],
+["che","چیزکیک","۶۰ دقیقه","متوسط","۴٫۸","","che"]];
+const Q=[["سالاد سزار","۲۰ دقیقه","آسان","cae"],["رپ مرغ و آووکادو","۱۵ دقیقه","آسان","wrap"],["شاکشوکا","۲۰ دقیقه","آسان","shak"],["پاستا پستو","۲۵ دقیقه","آسان","pes"]];
+let n=0;const fc=document.getElementById('fc');
+const card=(t,tm,d,r,p,i,c)=>`<article class="rc ${c||''}"><div class="ph"><img data-i="${i}" alt="${t}" loading="lazy"><button class="fav" aria-pressed="false" aria-label="ذخیره ${t}">${H}</button></div><h3>${t}</h3>${p?`<p>${p}</p>`:''}<div class="meta"><span>⏱ ${tm}</span><span class="dif">${d}</span><span><span class="st">★</span> ${r}</span></div></article>`;
+document.getElementById('pop').innerHTML=R.map((x,k)=>card(x[1],x[2],x[3],x[4],x[5],x[6],k?'':'big')).join('');
+document.getElementById('q4').innerHTML=Q.map(x=>`<article class="rc"><div class="ph"><img data-i="${x[3]}" alt="${x[0]}" loading="lazy"><span class="tm">${x[1]}</span></div><h3>${x[0]}</h3><div class="meta"><span class="dif">${x[2]}</span></div></article>`).join('');
+document.addEventListener('click',e=>{const b=e.target.closest('.fav');if(!b)return;const on=b.classList.toggle('on');b.setAttribute('aria-pressed',on);n+=on?1:-1;fc.textContent=n.toLocaleString('fa-IR')});
+const IG=['مرغ','سیب‌زمینی','قارچ','گوجه‌فرنگی','تخم‌مرغ','پنیر','شیر','آرد'];
+const ch=document.getElementById('chips'),cnt=document.getElementById('cnt');
+ch.innerHTML=IG.map(x=>`<button class="chip" aria-pressed="false">${x}</button>`).join('');
+const upd=()=>{const k=ch.querySelectorAll('[aria-pressed=true]').length;cnt.textContent=k?`${(Math.max(3,48-k*7)).toLocaleString('fa-IR')} دستور با ${k.toLocaleString('fa-IR')} ماده پیدا شد`:'هنوز ماده‌ای انتخاب نشده'};
+ch.addEventListener('click',e=>{const b=e.target.closest('.chip');if(b){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');upd()}});
+document.getElementById('find').onclick=()=>{upd();document.getElementById('popular').scrollIntoView({behavior:'smooth'})};
+const D=['شنبه','یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه'];
+const M=[['نیمرو و نان','نان و پنیر','املت','شاکشوکا','کره‌ و عسل','نان آووکادو','نان و تخم‌مرغ'],['سالاد سزار','لازانیا','پاستا پستو','رپ مرغ','عدس‌پلو','ساندویچ','زرشک‌پلو'],['کوکو سبزی','املت','آلفردو','ته‌چین مرغ','سوپ جو','کباب‌تابه','قورمه‌سبزی']];
+document.getElementById('dh').innerHTML='<th></th>'+D.map(d=>`<th>${d}</th>`).join('');
+document.getElementById('db').innerHTML=['صبحانه','ناهار','شام'].map((m,i)=>`<tr><th>${m}</th>${M[i].map((x,j)=>`<td${i==2&&j==3?' class="t"':''}>${x}</td>`).join('')}</tr>`).join('');
+
+const IMG={"alf": "../assets/img/toranj-01.jpg", "app": "../assets/img/toranj-02.jpg", "cae": "../assets/img/toranj-03.jpg", "che": "../assets/img/toranj-04.jpg", "dessert": "../assets/img/toranj-05.jpg", "drink": "../assets/img/toranj-06.jpg", "fast": "../assets/img/toranj-07.jpg", "hero": "../assets/img/toranj-08.jpg", "ingr": "../assets/img/toranj-09.jpg", "intl": "../assets/img/toranj-10.jpg", "iran": "../assets/img/toranj-11.jpg", "las": "../assets/img/toranj-12.jpg", "pes": "../assets/img/toranj-13.jpg", "shak": "../assets/img/toranj-14.jpg", "spring": "../assets/img/toranj-15.jpg", "tah": "../assets/img/toranj-16.jpg", "veg": "../assets/img/toranj-17.jpg", "wrap": "../assets/img/toranj-18.jpg", "zer": "../assets/img/toranj-19.jpg"};document.querySelectorAll('img[data-i]').forEach(i=>{i.src=IMG[i.dataset.i]});
+</script>
+</body>
+</html>

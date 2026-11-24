@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>گل‌آرا | بوتیک گل (نمونه طراحی)</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#4B4670;--s:#A9B8D0;--r:#C9BFE3;--bg:#FBF8F2;--fg:#3A3850;--card:#fff;--line:#E4E0EC;--soft:#F0ECF5;--on:#FBF8F2;--ink:#4B4670;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17151F;--fg:#E9E7F2;--card:#211E2D;--line:#322E45;--soft:#272336;--g:#A9B8D0;--on:#17151F}}
+:root[data-theme="dark"]{--bg:#17151F;--fg:#E9E7F2;--card:#211E2D;--line:#322E45;--soft:#272336;--g:#A9B8D0;--on:#17151F}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.8;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.w{max-width:1200px;margin:auto;padding:0 24px}
+section{padding:80px 0}
+h1,h2,h3{color:var(--g);line-height:1.4;font-weight:800}
+h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:8px}
+.sub{color:var(--fg);opacity:.7;margin-bottom:40px}
+.btn{display:inline-block;padding:14px 28px;border-radius:12px;font-weight:500;border:1.5px solid var(--g);transition:.25s;cursor:pointer;font-family:inherit;font-size:15px}
+.p{background:var(--g);color:var(--on)}.p:hover{opacity:.88}
+.o{color:var(--g)}.o:hover{background:var(--g);color:var(--on)}
+.ann{background:var(--g);color:var(--on);text-align:center;font-size:13px;padding:8px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:700;letter-spacing:6px;color:var(--g);line-height:1}.logo .i{width:26px;height:26px;stroke-width:1.3;vertical-align:0}
+nav{display:flex;gap:24px;font-size:14px}nav a:hover{color:var(--g);opacity:.7}
+.ic{display:flex;gap:16px;font-size:18px;align-items:center}
+.cnt{background:var(--r);color:var(--ink);border-radius:50%;font-size:11px;padding:0 7px;font-weight:700}
+.ph{position:relative;overflow:hidden;border-radius:16px;background:var(--soft)}
+.ph svg{position:absolute;inset:0;width:100%;height:100%}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:56px 0}
+.hero h1{font-size:clamp(34px,5vw,58px);margin-bottom:16px}
+.hero p{font-size:18px;opacity:.8;margin-bottom:32px;max-width:440px}
+.hero .ph{height:520px;border-radius:200px 200px 16px 16px}
+.hero .sm{position:absolute;width:150px;height:150px;border-radius:16px;left:-8px;bottom:24px}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cat{height:300px}.cat span{position:absolute;bottom:16px;right:16px;background:var(--bg);color:var(--g);padding:8px 16px;border-radius:8px;font-weight:700;font-size:15px;transition:.25s}
+.cat:hover span{background:var(--g);color:var(--on)}.cat svg{transition:transform .5s}.cat:hover svg{transform:scale(1.06)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.pr{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px}
+.pr .ph{height:260px;border-radius:12px}
+.pr h3{font-size:16px;margin:16px 4px 4px;color:var(--fg)}
+.price{margin:0 4px;font-weight:700;color:var(--g)}.old{text-decoration:line-through;opacity:.5;font-weight:300;font-size:13px;margin-right:8px}
+.off{position:absolute;top:12px;right:12px;background:var(--r);color:var(--ink);font-size:12px;padding:2px 10px;border-radius:99px;font-weight:700;z-index:2}
+.wish{position:absolute;top:12px;left:12px;z-index:2;background:var(--bg);border:0;border-radius:50%;width:36px;height:36px;cursor:pointer;color:var(--g);font-size:16px}
+.av{font-size:12px;margin:4px;opacity:.75}.av:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#7FA89A;margin-left:6px}
+.add{width:100%;margin-top:12px;padding:10px;border-radius:10px;border:1px solid var(--g);background:none;color:var(--g);font-family:inherit;cursor:pointer;transition:.2s}
+.add:hover{background:var(--g);color:var(--on)}
+.occ{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px}
+.occ .ph:nth-child(1){grid-column:span 2;grid-row:span 2}.occ .ph:nth-child(4),.occ .ph:nth-child(7){grid-column:span 2}
+.occ span{position:absolute;bottom:12px;right:14px;color:#fff;font-weight:700;font-size:19px;text-shadow:0 1px 8px rgba(0,0,0,.4);z-index:2}
+.band{background:var(--g);color:var(--on)}.band h2,.band h3{color:var(--on)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.two .ph{height:420px}
+.steps{display:flex;gap:12px;margin:24px 0 32px;flex-wrap:wrap}.steps b{border:1px solid var(--s);border-radius:99px;padding:4px 16px;font-weight:400;font-size:14px}
+.band .p{background:var(--bg);color:var(--g);border-color:var(--bg)}
+.gift{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.gift div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;text-align:center}
+.gift .ph{height:180px;margin-bottom:12px}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.rev .in{display:inline-flex;width:40px;height:40px;border-radius:50%;background:var(--r);color:var(--ink);align-items:center;justify-content:center;font-weight:700;margin-left:12px}
+.st{color:#c58f58;letter-spacing:2px;margin:12px 0 4px}.rev small{opacity:.6}
+.ig{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.ig .ph{aspect-ratio:1;border-radius:8px}
+.nl{background:var(--soft);border-radius:24px;padding:56px 24px;text-align:center}
+.nl form{display:flex;gap:8px;max-width:460px;margin:24px auto 0}
+.nl input{flex:1;padding:14px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--fg);font-family:inherit}
+.nl input:focus{outline:none;border-color:var(--g)}.nl input.bad{border-color:#b3524b}
+.msg{font-size:13px;margin-top:8px;min-height:20px}
+footer{background:var(--g);color:var(--on);padding:64px 0 24px;margin-top:80px}
+footer h3{color:var(--on);font-size:16px;margin-bottom:12px}footer li{list-style:none;font-size:14px;opacity:.8;margin-bottom:4px}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+.cp{border-top:1px solid rgba(250,249,246,.2);margin-top:40px;padding-top:16px;font-size:13px;opacity:.7;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:900px){nav{display:none}.hero,.two{grid-template-columns:1fr}.hero .ph{height:380px}.cats,.gift{grid-template-columns:1fr 1fr}.grid4{grid-template-columns:1fr 1fr}.occ{grid-template-columns:1fr 1fr}.occ .ph:nth-child(1){grid-column:span 2}.ig{grid-template-columns:repeat(3,1fr)}.fg{grid-template-columns:1fr 1fr}section{padding:56px 0}.rv{grid-template-columns:1fr!important}}
+@media(max-width:520px){.cats{grid-template-columns:1fr}.pr .ph{height:180px}.nl form{flex-direction:column}}
+.i{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.2em;flex:none}.i.f{fill:currentColor}
+.ib{background:none;border:0;color:var(--fg);cursor:pointer;display:flex;align-items:center;gap:4px;font-size:21px;padding:4px;font-family:inherit}.ib:hover{color:var(--g)}
+.st .i{width:16px;height:16px;stroke-width:1.4}.st{display:flex;gap:2px}
+.wish{display:flex;align-items:center;justify-content:center}.wish.on .i{fill:currentColor}
+.mb{display:none}.mnav{display:none}
+.btn .i{width:1em;height:1em;margin-right:6px}footer li .i{margin-left:8px;opacity:.9}
+@media(max-width:900px){.mb{display:flex}.mnav.open{display:flex;flex-direction:column;padding:8px 24px 16px;border-top:1px solid var(--line);font-size:15px}.mnav a{padding:10px 0;border-bottom:1px solid var(--line)}}
+.ib{position:relative}.cnt{position:absolute;top:-4px;right:-6px;min-width:18px;height:18px;line-height:18px;padding:0 5px;border-radius:99px;text-align:center;font-size:11px;box-shadow:0 0 0 2px var(--bg)}.cnt:empty{display:none}
+.wish .i{position:static;inset:auto;width:16px;height:16px}
+.vsw{display:flex;gap:8px;align-items:center;justify-content:center;padding:12px 24px;font-size:13px;flex-wrap:wrap;background:var(--soft)}
+.vsw button{border:1px solid var(--g);background:none;color:var(--g);border-radius:99px;padding:4px 14px;font-family:inherit;cursor:pointer}.vsw button.on{background:var(--g);color:var(--on)}
+.hb{display:none}.hb.on{display:block}.hb h1{font-size:clamp(34px,5vw,58px);margin-bottom:16px}.hb p{font-size:18px;opacity:.8;margin-bottom:32px;max-width:440px}.hb .btn{margin-bottom:8px}
+.ha{position:relative;min-height:600px;align-items:center}.ha.on{display:flex}.ha>.ph{position:absolute;inset:0;border-radius:0}.ha .w{position:relative;z-index:2;width:100%}.ha .tx{background:var(--bg);padding:40px;border-radius:24px;max-width:520px;margin:40px 0}
+.hbb.on,.hc.on,.hd.on{display:grid}
+.hbb{grid-template-columns:1fr 1.25fr;gap:48px;align-items:center;padding-block:56px}.hbb .ph{height:540px;border-radius:24px}
+.hc{grid-template-columns:1fr 1.5fr;gap:48px;align-items:center;padding-block:56px}.tri{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:16px;align-items:center}.tri .ph{height:340px;border-radius:16px}.tri .ph:nth-child(2){height:500px}
+.hd{grid-template-columns:1fr 1fr;min-height:620px;align-items:center}.hd .tx{padding:48px;max-width:560px;justify-self:end}.hd .ph{height:100%;min-height:620px;border-radius:0}
+@media(max-width:900px){.hbb,.hc,.hd{grid-template-columns:1fr}.hbb .ph{height:360px}.tri .ph{height:200px}.tri .ph:nth-child(2){height:280px}.hd .ph{min-height:360px}.hd .tx{justify-self:start;padding:40px 24px}.ha .tx{padding:24px;margin:24px 0}.ha{min-height:520px}}
+
+/* ===== images ===== */
+.tri{grid-template-columns:1fr 1.15fr 1fr}.tri .ph{height:300px}.tri .ph:nth-child(2){height:430px}
+@media(max-width:900px){.tri .ph{height:200px}.tri .ph:nth-child(2){height:280px}}
+.ph>img,.strip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--op,50% 50%);display:block}
+.cat img{transition:transform .5s}.cat:hover img{transform:scale(1.06)}
+.occ .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(30,25,45,.55),rgba(30,25,45,0) 55%);z-index:1;pointer-events:none}
+.swap img{opacity:0;transition:opacity .5s}.swap img.on{opacity:1}
+.steps button{border:1px solid var(--s);border-radius:99px;padding:4px 16px;font-weight:400;font-size:14px;background:none;color:inherit;font-family:inherit;cursor:pointer;transition:.2s}
+.steps button:hover{background:rgba(255,255,255,.14)}.steps button.on{background:var(--bg);color:var(--g);border-color:var(--bg)}
+.strip{position:absolute;inset:0;display:grid;grid-template-columns:1.15fr 1fr 1fr}
+.strip img{position:static;inset:auto;min-width:0}
+.two .collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:420px}
+.collage .ph{height:auto;min-height:0}.collage .ph:first-child{grid-row:span 2}
+@media(max-width:900px){.two .collage{height:360px}}
+@media(max-width:600px){.strip{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:600px){.nav{gap:6px}.logo{font-size:22px;letter-spacing:3px;gap:6px}.logo .i{width:20px;height:20px}.ic{gap:0}.ib{font-size:19px;padding:4px 5px}.w{padding:0 16px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol><symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol><symbol id="i-chevron-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol><symbol id="i-flower-2" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1"/><circle cx="12" cy="8" r="2"/><path d="M12 10v12"/><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"/><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"/></symbol><symbol id="i-gift" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"/><rect x="3" y="7" width="18" height="4" rx="1"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol><symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol><symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></symbol><symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol><symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-shopping-cart" viewBox="0 0 24 24"><path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"/><path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"/><circle cx="18" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></symbol><symbol id="i-sliders-horizontal" viewBox="0 0 24 24"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol><symbol id="i-user-round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol><symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol></defs></svg>
+<div class="ann"><svg class="i "><use href="#i-truck"/></svg> ارسال همان‌روز برای سفارش‌های تا ساعت ۱۴ · ارسال رایگان خرید بالای ۲ میلیون تومان</div>
+<header><div class="w nav">
+<button class="ib mb" id="mb" aria-label="منو"><svg class="i "><use href="#i-menu"/></svg></button>
+<a class="logo" href="#" dir="ltr" aria-label="Golara"><svg class="i"><use href="#i-flower-2"/></svg>GOLARA</a>
+<nav><a href="#">صفحه اصلی</a><a href="#best">فروشگاه گل</a><a href="#cats">دسته‌بندی‌ها</a><a href="#occ">مناسبت‌ها</a><a href="#design">سفارش اختصاصی</a><a href="#story">درباره ما</a></nav>
+<div class="ic"><button class="ib" aria-label="جستجو"><svg class="i "><use href="#i-search"/></svg></button><button class="ib" aria-label="حساب کاربری"><svg class="i "><use href="#i-user-round"/></svg></button><button class="ib" aria-label="علاقه‌مندی‌ها"><svg class="i "><use href="#i-heart"/></svg></button><button class="ib" aria-label="سبد خرید"><svg class="i "><use href="#i-shopping-cart"/></svg><span class="cnt" id="cart"></span></button></div>
+</div>
+<div class="mnav" id="mn"><a href="#">صفحه اصلی</a><a href="#best">فروشگاه گل</a><a href="#cats">دسته‌بندی‌ها</a><a href="#occ">مناسبت‌ها</a><a href="#design">سفارش اختصاصی</a><a href="#story">درباره ما</a></div></header>
+
+<div class="hb hc w on" id="h3"><div><h1>زیبایی را به زبان گل‌ها هدیه بده</h1><p>دسته‌گل‌هایی با عشق و ظرافت، برای لحظه‌هایی که ارزش به‌یادماندن دارند.</p><a class="btn p" href="#best">مشاهده دسته‌گل‌ها<svg class="i"><use href="#i-arrow-left"/></svg></a> <a class="btn o" href="#design">سفارش دسته‌گل اختصاصی</a></div><div class="tri"><div class="ph"><img data-i="ha" alt="دسته‌گل رنگارنگ با آفتابگردان و ادریسی" style="--op:50% 50%"></div><div class="ph"><img data-i="hb" alt="دسته‌گل رز هلویی در گلدان شیشه‌ای" style="--op:50% 55%"></div><div class="ph"><img data-i="hc" alt="دسته‌گل وحشی با اکالیپتوس در گلدان" style="--op:48% 50%"></div></div></div>
+
+<section id="cats"><div class="w"><h2>خرید بر اساس دسته‌بندی</h2><p class="sub">از رزهای کلاسیک تا گیاهان آپارتمانی</p>
+<div class="cats">
+<a class="ph cat"><img data-i="c_rose" alt="دسته‌گل رز صورتی" style="--op:50% 40%"><span>دسته‌گل‌های رز</span></a>
+<a class="ph cat"><img data-i="c_season" alt="دسته‌گل فصلی رانونکولوس" style="--op:50% 35%"><span>گل‌های فصلی</span></a>
+<a class="ph cat"><img data-i="c_box" alt="باکس گل صورتی مخملی" style="--op:50% 45%"><span>باکس گل</span></a>
+<a class="ph cat"><img data-i="c_basket" alt="سبد گل با رز و گل‌های سبز و سفید" style="--op:50% 45%"><span>سبد گل</span></a>
+<a class="ph cat"><img data-i="c_min" alt="شاخه‌های مینیمال گل سفید" style="--op:50% 30%"><span>گل‌های مینیمال</span></a>
+<a class="ph cat"><img data-i="c_plant" alt="گیاهان آپارتمانی در گلدان‌های سفید" style="--op:50% 60%"><span>گیاهان آپارتمانی</span></a>
+</div></div></section>
+
+<section id="best" style="padding-top:0"><div class="w"><h2>پرفروش‌ترین‌ها</h2><p class="sub">انتخاب مشتریان گل‌آرا در این ماه</p>
+<div class="grid4">
+<div class="pr"><div class="ph"><img data-i="b1" alt="دسته‌گل رز هلندی"><span class="off">٪۱۵</span><button class="wish" aria-label="علاقه‌مندی"><svg class="i "><use href="#i-heart"/></svg></button></div><h3>دسته‌گل رز هلندی</h3><div class="price">۱٬۸۵۰٬۰۰۰ تومان <span class="old">۲٬۱۷۰٬۰۰۰</span></div><div class="av">موجود</div><button class="add">افزودن به سبد</button></div>
+<div class="pr"><div class="ph"><img data-i="b2" alt="باکس گل صورتی آلیس"><button class="wish" aria-label="علاقه‌مندی"><svg class="i "><use href="#i-heart"/></svg></button></div><h3>باکس گل صورتی آلیس</h3><div class="price">۲٬۴۰۰٬۰۰۰ تومان</div><div class="av">موجود</div><button class="add">افزودن به سبد</button></div>
+<div class="pr"><div class="ph"><img data-i="b3" alt="دسته‌گل بهاری"><span class="off">٪۱۰</span><button class="wish" aria-label="علاقه‌مندی"><svg class="i "><use href="#i-heart"/></svg></button></div><h3>دسته‌گل بهاری</h3><div class="price">۱٬۴۴۰٬۰۰۰ تومان <span class="old">۱٬۶۰۰٬۰۰۰</span></div><div class="av">موجود</div><button class="add">افزودن به سبد</button></div>
+<div class="pr"><div class="ph"><img data-i="b4" alt="سبد گل سفید و سبز"><button class="wish" aria-label="علاقه‌مندی"><svg class="i "><use href="#i-heart"/></svg></button></div><h3>سبد گل سفید و سبز</h3><div class="price">۳٬۱۰۰٬۰۰۰ تومان</div><div class="av" style="color:#b8864a">تنها ۲ عدد باقی مانده</div><button class="add">افزودن به سبد</button></div>
+</div><p style="text-align:center;margin-top:40px"><a class="btn o" href="#">مشاهده همه محصولات<svg class="i "><use href="#i-arrow-left"/></svg></a></p></div></section>
+
+<section id="occ" style="padding-top:0"><div class="w"><h2>گل برای هر مناسبت</h2><p class="sub">لحظه‌ات را بگو، ما گلش را می‌چینیم</p>
+<div class="occ">
+<div class="ph"><img data-i="o_birth" alt="دسته‌گل رز صورتی برای تولد" style="--op:50% 40%"><span>تولد</span></div>
+<div class="ph"><img data-i="o_anniv" alt="رزهای قرمز برای سالگرد ازدواج" style="--op:50% 50%"><span>سالگرد ازدواج</span></div>
+<div class="ph"><img data-i="o_propose" alt="دسته‌گل سفید برای خواستگاری" style="--op:50% 40%"><span>خواستگاری</span></div>
+<div class="ph"><img data-i="o_mother" alt="دسته‌گل صورتی برای روز مادر" style="--op:50% 80%"><span>روز مادر</span></div>
+<div class="ph"><img data-i="o_love" alt="دسته‌گل لاله برای روز عشق" style="--op:50% 45%"><span>روز عشق</span></div>
+<div class="ph"><img data-i="o_thanks" alt="دسته‌گل همراه کارت تشکر" style="--op:50% 50%"><span>تبریک و قدردانی</span></div>
+<div class="ph"><img data-i="o_grad" alt="دسته‌گل جشن فارغ‌التحصیلی" style="--op:50% 10%"><span>جشن موفقیت و فارغ‌التحصیلی</span></div>
+</div></div></section>
+
+<section id="design" class="band"><div class="w two">
+<div><h2>دسته‌گل خودت را طراحی کن</h2><p>از انتخاب گل‌ها تا رنگ روبان و نوع بسته‌بندی، هر جزئیات را مطابق سلیقه خودت انتخاب کن.</p>
+<div class="steps" role="group" aria-label="مراحل طراحی دسته‌گل"><button type="button" data-s="s1">۱ · گل‌ها</button><button type="button" data-s="s2">۲ · رنگ</button><button type="button" data-s="s3">۳ · اندازه</button><button type="button" data-s="s4">۴ · روبان و بسته‌بندی</button><button type="button" data-s="d0">۵ · پیام</button></div>
+<a class="btn p" href="#">ساخت دسته‌گل اختصاصی</a></div>
+<div class="ph swap" id="dsw"><img class="on" data-s="d0" data-i="d0" alt="گل‌فروش در حال چیدن دسته‌گل اختصاصی" style="--op:50% 40%"><img data-s="s1" data-i="s1" alt="انتخاب گل‌ها" style="--op:50% 35%"><img data-s="s2" data-i="s2" alt="انتخاب رنگ" style="--op:50% 40%"><img data-s="s3" data-i="s3" alt="انتخاب اندازه" style="--op:50% 40%"><img data-s="s4" data-i="s4" alt="روبان و بسته‌بندی" style="--op:50% 40%"></div></div></section>
+
+<section><div class="w"><div class="ph" style="height:340px;border-radius:24px"><div class="strip"><img data-i="sp3" alt="نرگس" style="--op:50% 50%"><img data-i="sp1" alt="رانونکولوس" style="--op:50% 40%"><img data-i="sp2" alt="لاله" style="--op:50% 45%"></div>
+<div style="position:absolute;z-index:2;inset:auto 40px 40px auto;background:var(--bg);padding:24px 32px;border-radius:16px;max-width:380px"><h2 style="font-size:26px">روایت بهار در رنگ و عطر گل‌ها</h2><p style="font-size:14px;margin-bottom:16px">گلچین فصلی از رانونکولوس، لاله و نرگس.</p><a class="btn p" href="#" style="padding:10px 20px">مشاهده کالکشن</a></div></div></div></section>
+
+<section style="padding-top:0"><div class="w"><h2>هدیه‌های ماندگار</h2><p class="sub">گل، همراه با چیزی که لبخند را کامل می‌کند</p>
+<div class="gift">
+<div><div class="ph"><img data-i="g1" alt="گل و شکلات"></div><h3 style="font-size:16px">گل و شکلات</h3></div>
+<div><div class="ph"><img data-i="g2" alt="گل و عروسک"></div><h3 style="font-size:16px">گل و عروسک</h3></div>
+<div><div class="ph"><img data-i="g3" alt="گل و شمع معطر"></div><h3 style="font-size:16px">گل و شمع معطر</h3></div>
+<div><div class="ph"><img data-i="g4" alt="گل و کارت تبریک اختصاصی"></div><h3 style="font-size:16px">گل و کارت تبریک اختصاصی</h3></div>
+</div></div></section>
+
+<section id="story" style="background:var(--soft)"><div class="w two">
+<div class="collage"><div class="ph"><img data-i="st1" alt="گل‌آرایان در حال چیدن دسته‌گل در استودیو" style="--op:42% 50%"></div><div class="ph"><img data-i="st2" alt="فضای استودیوی گل‌آرا" style="--op:50% 50%"></div><div class="ph"><img data-i="st3" alt="بریدن روبان و آماده‌سازی دسته‌گل" style="--op:50% 40%"></div></div>
+<div><h2>هر گل، داستانی برای گفتن دارد</h2><p>گل‌آرا یک استودیوی مستقل گل‌آرایی است. هر صبح، گل‌ها را مستقیم از باغ‌دارها می‌آوریم و گل‌آرایان ما با دست، یکی‌یکی کنار هم می‌چینند تا هر دسته‌گل، حس واقعی یک هدیه شخصی را داشته باشد.</p><br><a class="btn o" href="#">بیشتر درباره ما</a></div></div></section>
+
+<section><div class="w"><h2>مشتریان چه می‌گویند</h2><p class="sub">روایت‌هایی از لحظه‌های ساخته‌شده با گل‌آرا</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px" class="rv">
+<div class="rev"><span class="in">ن</span><b>نازنین احمدی</b><div class="st"><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg></div><p>دسته‌گل دقیقاً مثل عکس بود و تازه. مادرم عاشقش شد.</p><small>خریداری شده: دسته‌گل رز هلندی</small></div>
+<div class="rev"><span class="in">ا</span><b>امیر کریمی</b><div class="st"><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg></div><p>بسته‌بندی شیک و تحویل سر وقت. برای خواستگاری عالی بود.</p><small>خریداری شده: باکس گل آلیس</small></div>
+<div class="rev"><span class="in">س</span><b>سارا موسوی</b><div class="st"><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg><svg class="i f"><use href="#i-star"/></svg><svg class="i "><use href="#i-star"/></svg></div><p>سلیقه و ظرافت‌شان فوق‌العاده است. حتماً دوباره سفارش می‌دهم.</p><small>خریداری شده: دسته‌گل بهاری</small></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="w"><h2><svg class="i "><use href="#i-instagram"/></svg> @golara.studio</h2><p class="sub">پشت‌صحنه استودیو و طرح‌های مشتریان</p>
+<div class="ig">
+<div class="ph"><img data-i="i1" alt="دست‌ها در حال بسته‌بندی دسته‌گل"></div><div class="ph"><img data-i="i2" alt="باکس گل از نمای بالا"></div><div class="ph"><img data-i="d0" alt="گل‌فروش در حال چیدن دسته‌گل" style="--op:50% 40%"></div><div class="ph"><img data-i="i4" alt="گل‌های سفید در گلدان"></div><div class="ph"><img data-i="i5" alt="لاله‌های سفید در گلدان"></div><div class="ph"><img data-i="i6" alt="باکس گل صورتی با روبان قرمز"></div>
+</div></div></section>
+
+<div class="w"><div class="nl"><h2>با دنیای رنگارنگ گل‌ها همراه شو</h2><p class="sub" style="margin:0">پیشنهادهای ویژه و تازه‌های استودیو، مستقیم در ایمیل تو.</p>
+<form id="f" novalidate><input id="em" type="email" placeholder="ایمیل شما" dir="ltr"><button class="btn p">عضویت</button></form><div class="msg" id="m"></div></div></div>
+
+<footer><div class="w"><div class="fg">
+<div><h3 dir="ltr" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;letter-spacing:5px">GOLARA</h3><p style="font-size:14px;opacity:.8">بوتیک گل و دسته‌گل‌های اختصاصی، با عشق و ظرافت.</p></div>
+<div><h3>دسترسی سریع</h3><ul><li>فروشگاه گل</li><li>مناسبت‌ها</li><li>سفارش اختصاصی</li><li>درباره ما</li></ul></div>
+<div><h3>راهنما</h3><ul><li>راهنمای خرید</li><li>شرایط ارسال</li><li>بازگشت کالا</li><li>سوالات متداول</li></ul></div>
+<div><h3>پشتیبانی</h3><ul><li><svg class="i "><use href="#i-phone"/></svg>۰۲۱-۰۰۰۰۰۰۰۰</li><li><svg class="i "><use href="#i-mail"/></svg>support@golara.example</li><li><svg class="i "><use href="#i-map-pin"/></svg>تهران، خیابان ولیعصر، بالاتر از میدان ونک، کوچه‌ی گلستان، پلاک ۱۲</li><li><svg class="i "><use href="#i-instagram"/></svg>اینستاگرام &nbsp; <svg class="i "><use href="#i-send"/></svg>تلگرام</li></ul></div>
+</div><div class="cp"><span>© ۱۴۰۵ گل‌آرا. همه حقوق محفوظ است.</span><span><svg class="i "><use href="#i-shield-check"/></svg> پرداخت امن &nbsp; <svg class="i "><use href="#i-flower-2"/></svg> ضمانت تازگی</span></div></div></footer>
+
+<script>
+function rnd(i){var x=Math.sin(i*9301+49297)*233280;return x-Math.floor(x)}
+document.querySelectorAll('.ph[data-p]').forEach(function(el,k){
+var c=el.dataset.p.split(','),n=+el.dataset.n||4,s='<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"><rect width="100" height="100" fill="'+(el.dataset.leaf?'#3E4268':'#F0ECF5')+'"/>';
+for(var i=0;i<n*2;i++){var a=rnd(k*50+i),b=rnd(k*50+i+9);s+='<ellipse cx="'+(a*100)+'" cy="'+(b*100)+'" rx="3" ry="9" fill="#7F8FB5" opacity=".55" transform="rotate('+(a*360)+' '+(a*100)+' '+(b*100)+')"/>'}
+for(var i=0;i<n;i++){var x=10+rnd(k*50+i+3)*80,y=10+rnd(k*50+i+5)*80,r=7+rnd(k*50+i+7)*9,col=c[i%c.length];
+for(var j=0;j<6;j++)s+='<circle cx="'+(x+Math.cos(j*1.047)*r*.6)+'" cy="'+(y+Math.sin(j*1.047)*r*.6)+'" r="'+(r*.55)+'" fill="'+col+'" opacity=".9"/>';
+s+='<circle cx="'+x+'" cy="'+y+'" r="'+(r*.25)+'" fill="#EADFC8"/>'}
+el.insertAdjacentHTML('afterbegin',s+'</svg>')});
+var n=0,fa='۰۱۲۳۴۵۶۷۸۹';
+document.querySelectorAll('.add').forEach(function(b){b.onclick=function(){n++;document.getElementById('cart').textContent=String(n).replace(/\d/g,function(d){return fa[d]});b.innerHTML='<svg class="i "><use href="#i-check"/></svg> اضافه شد';setTimeout(function(){b.textContent='افزودن به سبد'},1200)}});
+document.querySelectorAll('.wish').forEach(function(b){b.onclick=function(){b.classList.toggle('on')}});
+document.getElementById('f').onsubmit=function(e){e.preventDefault();var i=document.getElementById('em'),m=document.getElementById('m'),ok=/^\S+@\S+\.\S+$/.test(i.value);i.classList.toggle('bad',!ok);m.textContent=ok?'عضویت شما ثبت شد. سپاسگزاریم!':'لطفاً یک ایمیل معتبر وارد کنید.';m.style.color=ok?'inherit':'#b3524b'};
+document.getElementById('mb').onclick=function(){var m=document.getElementById('mn'),o=m.classList.toggle('open');this.innerHTML='<svg class="i "><use href="#i-menu"/></svg>';this.firstChild.firstChild.setAttribute('href',o?'#i-x':'#i-menu')};
+document.querySelectorAll('.vsw button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.vsw button,.hb').forEach(function(e){e.classList.remove('on')});b.classList.add('on');document.getElementById('h'+b.dataset.v).classList.add('on')}});
+</script>
+<script>
+(function(){var sw=document.getElementById('dsw'),im=sw.querySelectorAll('img'),bt=document.querySelectorAll('.steps button');
+function show(k){im.forEach(function(i){i.classList.toggle('on',i.dataset.s===k)});bt.forEach(function(b){b.classList.toggle('on',b===cur);b.setAttribute('aria-pressed',b===cur)})}
+var cur=null;bt.forEach(function(b){function go(){cur=b;show(b.dataset.s)}b.onclick=go;b.onfocus=go;b.onmouseenter=go})})();
+</script>
+<script>
+var IMG={"c_rose": "../assets/img/golara-01.webp", "c_season": "../assets/img/golara-02.webp", "c_box": "../assets/img/golara-03.webp", "c_basket": "../assets/img/golara-04.webp", "c_min": "../assets/img/golara-05.webp", "c_plant": "../assets/img/golara-06.webp", "b1": "../assets/img/golara-07.webp", "b2": "../assets/img/golara-08.webp", "b3": "../assets/img/golara-09.webp", "b4": "../assets/img/golara-10.webp", "o_birth": "../assets/img/golara-11.webp", "o_anniv": "../assets/img/golara-12.webp", "o_propose": "../assets/img/golara-13.webp", "o_mother": "../assets/img/golara-14.webp", "o_love": "../assets/img/golara-15.webp", "o_thanks": "../assets/img/golara-16.webp", "o_grad": "../assets/img/golara-17.webp", "d0": "../assets/img/golara-18.webp", "s1": "../assets/img/golara-19.webp", "s2": "../assets/img/golara-20.webp", "s3": "../assets/img/golara-21.webp", "s4": "../assets/img/golara-22.webp", "sp1": "../assets/img/golara-23.webp", "sp2": "../assets/img/golara-24.webp", "sp3": "../assets/img/golara-25.webp", "g1": "../assets/img/golara-26.webp", "g2": "../assets/img/golara-27.webp", "g3": "../assets/img/golara-28.webp", "g4": "../assets/img/golara-29.webp", "st1": "../assets/img/golara-30.webp", "st2": "../assets/img/golara-31.webp", "st3": "../assets/img/golara-32.webp", "i1": "../assets/img/golara-33.webp", "i2": "../assets/img/golara-34.webp", "i4": "../assets/img/golara-35.webp", "i5": "../assets/img/golara-36.webp", "i6": "../assets/img/golara-37.webp", "ha": "../assets/img/golara-38.webp", "hb": "../assets/img/golara-39.webp", "hc": "../assets/img/golara-40.webp"};
+document.querySelectorAll("img[data-i]").forEach(function(i){i.src=IMG[i.dataset.i]});
+</script>
+</body>
+</html>
